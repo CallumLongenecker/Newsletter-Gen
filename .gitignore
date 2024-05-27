@@ -5,3 +5,4 @@
 *.webp
 *.zip
 backend/example_files
+__pycache__

@@ -3,6 +3,8 @@ import React from "react";
 import Button from "../components/Button/Button";
 import { useRouter } from "next/navigation";
 import DeletePropertyButton from "./DeletePropertyButton";
+import SubmitPropertiesButton from "./SubmitPropertiesButton";
+import GenerateEmailButton from "./GenerateEmailButton";
 
 interface Property {
   id: number;
@@ -35,6 +37,12 @@ const PropertiesList = async () => {
         </div>
       ))}
       {properties.length === 0 && <p>No properties found</p>}
+      {properties.length > 0 && (
+        <>
+          <SubmitPropertiesButton properties={properties} />
+          <GenerateEmailButton />
+        </>
+      )}
     </>
   );
 };
